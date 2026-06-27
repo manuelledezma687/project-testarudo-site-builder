@@ -1,0 +1,10 @@
+{
+    "adminUser": {
+        "email" : "mledezma@testertestarudo.com",
+        "password": "travian88"
+    },
+    "StudentUser": {
+        "email" : "testcomprauno@yopmail.com",
+        "password": "travian88"
+    }
+}
