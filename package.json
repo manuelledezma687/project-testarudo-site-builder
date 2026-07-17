@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
-    "test:login": "npx playwright test tests/login.spec.ts"
+    "bddgen": "npx bddgen",
+    "test": "npx bddgen && npx playwright test",
+    "test:login": "npx bddgen && npx playwright test features/login.feature",
+    "test:login-snapshot": "npx bddgen && npx playwright test features/login-snapshot.feature",
+    "report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,10 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "@types/node": "^26.0.1"
+    "@types/node": "^26.0.1",
+    "playwright-bdd": "^9.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }

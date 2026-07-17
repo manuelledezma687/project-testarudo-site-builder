@@ -5,20 +5,26 @@ export class LoginPage {
 
     readonly page: Page;
 
+    private readonly Locators = {
+        emailInput: 'auth-email',
+        passwordInput: 'auth-password',
+        submitButton: 'auth-submit',
+    }
+
     constructor(page: Page) {
         this.page = page;
     }
 
     async fillEmail(email: string){
-        await this.page.getByTestId('auth-email').fill(email);
+        await this.page.getByTestId(this.Locators.emailInput).fill(email);
     }
 
     async fillPassword(password: string){
-        await this.page.getByTestId('auth-password').fill(password);
+        await this.page.getByTestId(this.Locators.passwordInput).fill(password);
     }
 
     async clickLoginUser(){
-        await this.page.getByTestId('auth-submit').click();
+        await this.page.getByTestId(this.Locators.submitButton).click();
     }
 
     async loginUser(email: string, password: string) {

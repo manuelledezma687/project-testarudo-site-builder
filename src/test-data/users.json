@@ -1,10 +1,8 @@
 {
     "adminUser": {
-        "email" : "mledezma@testertestarudo.com",
-        "password": "travian88"
+        "email" : "mledezma@testertestarudo.com"
     },
     "StudentUser": {
-        "email" : "testcomprauno@yopmail.com",
-        "password": "travian88"
+        "email" : "testcomprauno@yopmail.com"
     }
 }

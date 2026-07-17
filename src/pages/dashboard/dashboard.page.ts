@@ -21,6 +21,10 @@ export class DashboardPage {
         await expect(this.page.getByRole('heading', { name: 'Panel de administración' })).toBeVisible();
     }
 
+    async isAdminContainTheText(message: string) {
+        await expect(this.page.locator('h2')).toContainText(message);
+    }
+
     async isStudentPanel() {
        await expect(this.page.getByRole('heading', { name: 'Mi Panel' })).toBeVisible();
     }
