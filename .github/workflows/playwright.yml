@@ -5,6 +5,15 @@ on:
     branches: [main, master, develop]
   pull_request:
     branches: [main, master, develop]
+  workflow_dispatch:
+  inputs:
+    environment:
+      description: "staging"
+      required: true
+      default: "staging"
+      type: choice
+      options: [staging]
+
 
 jobs:
   test:
@@ -32,7 +41,7 @@ jobs:
       
       - name: Ejecutar tests en Playwright
         run: npm run test
-        
+
       - name: Limpiar .env
         if: always()
         run: rm -f .env
