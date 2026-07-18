@@ -26,7 +26,7 @@ test.describe('Login in Testarudo platform', () => {
   await dashboardPage.isStudentPanel();
 });
 
-  test.only('Test login Admin URL', async ({ loginPage, dashboardPage,page } ) => {
+  test('Test login Admin URL', async ({ loginPage, dashboardPage,page } ) => {
   await loginPage.loginUser(users.adminUser.email,password.admin);
   await dashboardPage.isAdminLogged();
 });
