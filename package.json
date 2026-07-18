@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "test:login": "npx playwright test tests/login.spec.ts"
+    "test:login": "npx playwright test tests/login.spec.ts",
+    "test:dashboard": "npx playwright test tests/dashboard.spec.ts",
+    "report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +16,8 @@
   "devDependencies": {
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }
