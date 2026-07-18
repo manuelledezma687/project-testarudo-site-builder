@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
+    "test": "npx playwright test --update-snapshots",
     "test:login": "npx playwright test tests/login.spec.ts",
     "test:dashboard": "npx playwright test tests/dashboard.spec.ts",
     "report": "npx playwright show-report"
