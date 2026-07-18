@@ -6,13 +6,13 @@ on:
   pull_request:
     branches: [main, master, develop]
   workflow_dispatch:
-  inputs:
-    environment:
-      description: "staging"
-      required: true
-      default: "staging"
-      type: choice
-      options: [staging]
+    inputs:
+      environment:
+        description: "staging"
+        required: true
+        default: "staging"
+        type: choice
+        options: [staging]
 
 
 jobs:
